@@ -1,40 +1,28 @@
 <project>
-   <build>
-     <plugins>
-       <plugin>
-         <groupId>org.apache.maven.plugins</groupId>
-         <artifactId>maven-dependency-plugin</artifactId>
-         <version>3.1.2</version>
-         <executions>
-           <execution>
-             <id>unpack</id>
-             <phase>package</phase>
-             <goals>
-               <goal>unpack</goal>
-             </goals>
-             <configuration>
-               <artifactItems>
-                 <artifactItem>
-                   <groupId>junit</groupId>
-                   <artifactId>junit</artifactId>
-                   <version>3.8.1</version>
-                   <type>jar</type>
-                   <overWrite>false</overWrite>
-                   <outputDirectory>${project.build.directory}/alternateLocation</outputDirectory>
-                   <destFileName>optional-new-name.jar</destFileName>
-                   <includes>**/*.class,**/*.xml</includes>
-                   <excludes>**/*test.class</excludes>
-                 </artifactItem>
-               </artifactItems>
-               <includes>**/*.java</includes>
-               <excludes>**/*.properties</excludes>
-               <outputDirectory>${project.build.directory}/wars</outputDirectory>
-               <overWriteReleases>false</overWriteReleases>
-               <overWriteSnapshots>true</overWriteSnapshots>
-             </configuration>
-           </execution>
-         </executions>
-       </plugin>
-     </plugins>
-   </build>
- </project>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.1.2</version>
+        <configuration>
+          <artifactItems>
+            <artifactItem>
+              <groupId>[ groupId ]</groupId>
+              <artifactId>[ artifactId ]</artifactId>
+              <version>[ version ]</version>
+              <type>[ packaging ]</type>
+              <classifier> [classifier - optional] </classifier>
+              <overWrite>[ true or false ]</overWrite>
+              <outputDirectory>[ output directory ]</outputDirectory>
+              <destFileName>[ filename ]</destFileName>
+              <includes>[ comma separated list of file filters ]</includes>
+              <excludes>[ comma separated list of file filters ]</excludes>
+            </artifactItem>
+          </artifactItems>
+          <!-- other configurations here -->
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
