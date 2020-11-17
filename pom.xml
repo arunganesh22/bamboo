@@ -1,4 +1,6 @@
-<plugin>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <plugin>
      <groupId>org.apache.maven.plugins</groupId>
      <artifactId>maven-dependency-plugin</artifactId>
      <version>3.5.2</version>
@@ -30,5 +32,6 @@
        <overWriteSnapshots>true</overWriteSnapshots>
      </configuration>
    </execution>
- </executions>
-</plugin>
+  </executions>
+ </plugin>
+</project>
